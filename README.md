@@ -22,7 +22,7 @@ A brief overview of your project and its purpose. Mention which problem statemen
 🖼️ Screenshots:
 
 ![Screenshot 1](./artifacts/arch/UI.png)
-
+![Screenshot 2](./artifacts/arch/Slide1.PNG)
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.
 
