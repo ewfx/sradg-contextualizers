@@ -37,7 +37,6 @@ The deployment of RAG and LLMs is anticipated to yield the following benefits:
 ![Screenshot 2](./artifacts/arch/Slide1.PNG)
 
 ## 💡 Inspiration
-Here's a description of your proposed solution, incorporating the key features and benefits you've outlined:
 **Problem:**
 Reconciling millions of records in the banking sector is a complex, time-consuming, and error-prone process, demanding extensive analysis and posing significant operational challenges.
 **Proposed Solution**: **RAG-Powered Reconciliation Assistant**
@@ -128,17 +127,20 @@ Briefly outline the technologies, frameworks, and tools used in development.
    poetry install 
    ```
 ---
-8. Create Vector Database (Same Directory/Folder as Git ROOT)   
+8. Make .env file with the following content (Same Directory/Folder as Git ROOT)
+   ```sh
+   GEMINI_API_KEY='API_KEY_FROM_GOOGLE_AI_STUDIO'
+9. Create Vector Database (Same Directory/Folder as Git ROOT)   
    ```sh
    python code/src/backend/create_vector_db.py
    ```
 ---
-9. Run Application (Same Directory/Folder as Git ROOT)   
+10. Run Application (Same Directory/Folder as Git ROOT)   
    ```sh
    poetry run uvicorn code.src.app:app --port 8000 --workers 4
    ```
 ---
-10. Open URL in Browser:
+11. Open URL in Browser:
    ```sh
    http://127.0.0.1:8000
    ```
