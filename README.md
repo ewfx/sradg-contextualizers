@@ -34,7 +34,7 @@ The deployment of RAG and LLMs is anticipated to yield the following benefits:
 ![Screenshot 1](./artifacts/arch/UI.png)
 
 ## 🔷 Architecture Diagram
-![Screenshot 2](./artifacts/arch/Slide1.PNG)
+![Screenshot 2](./artifacts/arch/Slide1_v2.PNG)
 
 ## 💡 Inspiration
 **Problem:**
