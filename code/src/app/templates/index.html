@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarter Reconciliation | AI-Powered Data Matching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/index.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>Smarter Reconciliation</h1>
+            </div>
+            <div class="user-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-history"></i> History
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-user"></i> Operator
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Reconciliation Setup</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Data Source 1</label>
+                    <select class="form-select" id="data-source-one">
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Data Source 2</label>
+                    <select class="form-select" id="data-source-two">
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%;" id="submitDataSource">
+                    <i class="fas fa-play"></i> Submit
+                </button>
+
+                <div class="divider"></div>
+
+                <div class="form-group">
+                    <label class="form-label">Key Columns</label>
+                    <select class="form-select" multiple id="key-columns" disabled>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Criteria Columns</label>
+                    <select class="form-select" multiple id="criteria-columns" disabled>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Date Columns</label>
+                    <select class="form-select" multiple id="date-columns" disabled>
+                    </select>
+                </div>
+
+
+                <div class="divider"></div>
+
+                <button class="btn btn-primary" style="width: 100%;" id="runReconciliation">
+                    <i class="fas fa-play"></i> Run Reconciliation
+                </button>
+            </div>
+
+            <div class="content-area">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <div class="card-title">Reconciliation Summary</div>
+                        <div class="status-indicator">
+                            <div class="status-dot dot-success"></div>
+                            <span id="LastRunTimeStamp">Last run: - </span>
+                        </div>
+                    </div>
+
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <div class="summary-card-value" id="TotalSuccessCount" style="color: var(--success);">0</div>
+                            <div class="summary-card-label">Total Records Matched</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-value" id="PotentialIssuesCount" style="color: var(--warning);">0</div>
+                            <div class="summary-card-label">Potential Issues</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-value" id="CriticalAnomaliesCount" style="color: var(--danger);">0</div>
+                            <div class="summary-card-label">Critical Anomalies</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card fade-in">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="anomalies">Anomalies Detected</div>
+                        <div class="tab" data-tab="trends">Trend Analysis</div>
+                        <div class="tab" data-tab="insights">AI Insights</div>
+                    </div>
+
+                    <div class="tab-content active" id="anomalies">
+                        <div class="table-responsive" id="AnomaliesDetectedTable">
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="trends">
+                        <div class="feedback-section">
+                            <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--gray);">AI Trend Analysis Summary</h3>
+                            <p style="font-size: 14px; color: var(--dark); margin-bottom: 15px;" id="AITrendSummary">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="insights">
+                        <div style="background-color: var(--primary-light); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--primary);">AI-Generated Insights</h3>
+                            <p style="font-size: 14px; color: var(--dark);" id="AIGeneratedInsights">
+                            </p>
+                        </div>
+                        <div class="feedback-section">
+                            <textarea class="feedback-textarea" placeholder="Provide feedback on these insights or ask the AI a question..."></textarea>
+                            <div class="feedback-actions">
+                                <button class="btn btn-outline">Cancel</button>
+                                <button class="btn btn-primary">Submit Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
