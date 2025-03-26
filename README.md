@@ -130,6 +130,8 @@ Briefly outline the technologies, frameworks, and tools used in development.
 8. Make .env file with the following content (Same Directory/Folder as Git ROOT)
    ```sh
    GEMINI_API_KEY='API_KEY_FROM_GOOGLE_AI_STUDIO'
+   ```
+---
 9. Create Vector Database (Same Directory/Folder as Git ROOT)   
    ```sh
    python code/src/backend/create_vector_db.py
